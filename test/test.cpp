@@ -1,4 +1,5 @@
-﻿#include <iostream>
+﻿//Вычисление максимального элемента массива
+#include <iostream>
 
 int main()
 {
