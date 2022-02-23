@@ -3,6 +3,6 @@ using namespace std;
 
 void SqMax (m)
 {
-int maxsq=m*m;
-cout << "Квадрат максимального элемента: " << max2 << endl;
+int sq=m*m;
+cout << "Квадрат элемента: " << sq << endl;
 }
