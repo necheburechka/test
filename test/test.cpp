@@ -4,15 +4,15 @@
 int main()
 {
 
-    int a[10], i, m = 0, max;
+    int mas[10], i, m = 0, max;
     std::cout << " Введите 20 элементов массива: ";
     for (i = 0; i < 10; i++)
-        std::cin >> a[i];
-    max = a[0];
+        std::cin >> mas[i];
+    max = mas[0];
 
     for (i = 1; i < 10; i++) {
-        if (a[i] > max) {
-            max = a[i];
+        if (mas[i] > max) {
+            max = mas[i];
             m = i;
         }
     }
