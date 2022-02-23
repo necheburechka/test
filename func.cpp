@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void SqMax (m)
+void SqMax (max)
 {
-int sq=m*m;
-cout << "Квадрат элемента: " << sq << endl;
+int sqmax=max*max;
+cout << "Квадрат элемента: " << sqmax << endl;
 }
