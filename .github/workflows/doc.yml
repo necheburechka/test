@@ -20,7 +20,7 @@ jobs:
           path: doc
           name: Documentation
       - name: Pushes to another repository
-        uses: cpina/github-action-push-to-another-repository@main
+        uses: cpina/github-action-push-to-another-repository@master
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
@@ -28,4 +28,4 @@ jobs:
           destination-github-username: 'necheburechka'
           destination-repository-name: 'testdoc'
           user-email: 2020102157@pnu.edu.ru
-          target-branch: main
+          target-branch: master
