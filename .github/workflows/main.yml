@@ -1,4 +1,4 @@
-name: CI
+name: Prog
 
 on: 
   push:
@@ -23,3 +23,17 @@ jobs:
         if: steps.check_files.outputs.files_exists == 'true'
         # Only runs if all of the files exists
         run: echo All files exists!
+        
+      - name: compile
+        run: |
+          sudo apt-get install g++
+          g++ -I ./test/test.cpp -o test.exe
+          ls
+          
+      - name: result
+        uses: actions/upload-artifact@v2
+        with:
+          name: Test
+          path: /test/test.exe
+      
+      -
