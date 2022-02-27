@@ -28,4 +28,4 @@ jobs:
           destination-github-username: 'necheburechka'
           destination-repository-name: 'testdoc'
           user-email: 2020102157@pnu.edu.ru
-          target-branch: master
+          target-branch: maste
