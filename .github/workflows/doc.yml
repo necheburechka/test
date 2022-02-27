@@ -13,7 +13,7 @@ jobs:
       - name: Documentationcreate
         uses: mattnotmitt/doxygen-action@v1.9.2
         with: 
-          doxyfile-path: 'doc/Doxyfile'
+          doxyfile-path: './Doxyfile'
       - name: upload result
         uses: actions/upload-artifact@v2
         with:
