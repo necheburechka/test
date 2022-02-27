@@ -11,7 +11,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         if: steps.chek_file.outputs.files_exists =='true'
-          run:|
+          run: echo All files exists!
           sudo apt update
           sudo apt-get install doxygen
           doxygen config
