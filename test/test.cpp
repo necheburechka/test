@@ -25,7 +25,7 @@ class Calculator {};
 int main()
 {
 	int x, y;
-    std::cin >> x >> y;
+    std::cin >> a >> y;
     std::cout << "The sum is " << add(x, y) << std::endl;
     return 0;
 }
