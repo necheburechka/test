@@ -10,15 +10,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: Documentationcreate
-        uses: mattnotmitt/doxygen-action@v1.9.2
-        with: 
-          doxyfile-path: './Doxyfile'
-      - name: upload result
-        uses: actions/upload-artifact@v2
-        with:
-          path: doc
-          name: Doxygen Documentation
+        if: steps.chek_file.outputs.files_exists =='true'
+          run:|
+          sudo apt update
+          sudo apt-get install doxygen
+          doxygen config
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@main
         env:
