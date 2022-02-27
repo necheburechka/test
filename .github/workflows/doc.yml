@@ -1,4 +1,4 @@
-name: Make Doxygen Docs
+name: Make Doxygen
 on: 
   push:
     branches: [ master ]
@@ -10,13 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - name: DocCreate
-        if: steps.check_files.outputs.files_exists == 'true'
-          # Only runs if all of the files exists
-        run: echo All files exists!
-          sudo apt update
-          sudo apt-get install doxygen
-          doxygen config
+      - name: DocumentationCreate
+        uses: mattnotmitt/doxygen-action@v1.9.2
+        with: 
+          doxyfile-path: './Doxyfile'
+      - name: upload result
+        uses: actions/upload-artifact@v2
+        with:
+          path: docs
+          name: Documentation
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@master
         env:
