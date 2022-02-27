@@ -26,9 +26,9 @@ jobs:
         
       - name: compile
         run: |
-          sudo apt install build-essential
+          sudo apt-get install build-essential
           gcc --version
-          gcc ./test/test.cpp -o test.exe
+          gcc -I ./test/test.cpp -o test.exe
           
       - name: result
         uses: actions/upload-artifact@v2
