@@ -26,13 +26,13 @@ jobs:
         
       - name: compile
         run: |
-          sudo apt-get install g++
+          sudo apt install build-essential
+          sudo apt -y install g++-7 g++-8 g++-9 g++-10
           g++ -I ./test/test.cpp -o test.exe
-          ls
           
       - name: result
         uses: actions/upload-artifact@v2
         with:
           name: Test
-          path: /test/test.exe
+          path: test.exe
       
