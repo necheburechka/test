@@ -26,9 +26,10 @@ jobs:
         
       - name: compile
         run: |
-          sudo apt-get install build-essential
-          gcc --version
+          sudo apt-get install g++-10
+          g++ -dumpversion
           gcc -I ./test/test.cpp -o test.exe
+          ls
           
       - name: result
         uses: actions/upload-artifact@v2
