@@ -1,4 +1,5 @@
 name: Make Doxygen
+
 on: 
   push:
     branches: [ master ]
@@ -17,7 +18,7 @@ jobs:
       - name: upload result
         uses: actions/upload-artifact@v2
         with:
-          path: docs
+          path: doc
           name: Documentation
       - name: Pushes to another repository
         uses: cpina/github-action-push-to-another-repository@master
