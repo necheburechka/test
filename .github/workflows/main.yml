@@ -28,7 +28,7 @@ jobs:
         run: |
           sudo apt-get install g++-10
           g++ -dumpversion
-          g++ -I test/test.cpp -o test.exe
+          g++ test.cpp -o test.exe
           ls
           
       - name: result
