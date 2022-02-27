@@ -10,8 +10,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-        if: steps.chek_file.outputs.files_exists =='true'
-          run: echo All files exists!
+      - name: DocCreate
+        if: steps.check_files.outputs.files_exists == 'true'
+          # Only runs if all of the files exists
+        run: echo All files exists!
           sudo apt update
           sudo apt-get install doxygen
           doxygen config
